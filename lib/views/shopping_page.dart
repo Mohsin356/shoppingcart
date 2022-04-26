@@ -61,7 +61,7 @@ class Shopping extends StatelessWidget {
                                     ),
                                     ElevatedButton(
                                       onPressed: () {
-                                        cartController.removefromCart();
+                                        cartController.removefromCart(controller.products[index]);
                                       },
                                       style: ElevatedButton.styleFrom(primary: Colors.red,
                                           onPrimary: Colors.white),
@@ -74,7 +74,6 @@ class Shopping extends StatelessWidget {
                             );
                           });
                   }),
-
                 ),
               ),
               GetX<CartController>(

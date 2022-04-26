@@ -2,7 +2,6 @@ import 'package:get/state_manager.dart';
 import 'package:shoppingcart/models/product.dart';
 
 class CartController extends GetxController {
-  var productForRemoving = Product();
   List cartItems = <Product>[].obs;
   int get itemsCount=> cartItems.length;
   double get totalPrice=> cartItems.fold(0, (sum, item) => sum + item.price);
@@ -10,7 +9,7 @@ class CartController extends GetxController {
   addToCart(Product product){
     cartItems.add(product);
   }
-  removefromCart() {
-    cartItems.removeWhere(((item) => item.id == productForRemoving.id));
+  removefromCart(Product product) {
+    cartItems.remove(product);
   }
 }
