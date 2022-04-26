@@ -48,6 +48,7 @@ class Shopping extends StatelessWidget {
                                             style: const TextStyle(fontSize: 24)),
                                       ],
                                     ),
+                                    const SizedBox(height: 10,),
                                     ElevatedButton(
                                       onPressed: () {
                                           cartController.addToCart(
@@ -57,6 +58,14 @@ class Shopping extends StatelessWidget {
                                       style: ElevatedButton.styleFrom(primary: Colors.blue,
                                       onPrimary: Colors.white),
                                       child: const Text('Add to Cart'),
+                                    ),
+                                    ElevatedButton(
+                                      onPressed: () {
+                                        cartController.removefromCart();
+                                      },
+                                      style: ElevatedButton.styleFrom(primary: Colors.red,
+                                          onPrimary: Colors.white),
+                                      child: const Text('Remove from Cart'),
                                     ),
 
                                   ],
