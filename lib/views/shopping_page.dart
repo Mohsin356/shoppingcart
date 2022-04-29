@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:shoppingcart/controllers/cart_controller.dart';
 import 'package:shoppingcart/controllers/shopping_controller.dart';
+import 'package:shoppingcart/views/change_name.dart';
 
 class Shopping extends StatelessWidget {
   Shopping({Key? key}) : super(key: key);
@@ -59,6 +60,7 @@ class Shopping extends StatelessWidget {
                                       onPrimary: Colors.white),
                                       child: const Text('Add to Cart'),
                                     ),
+                                    const SizedBox(height: 10,),
                                     ElevatedButton(
                                       onPressed: () {
                                         cartController.removefromCart(controller.products[index]);
@@ -82,7 +84,22 @@ class Shopping extends StatelessWidget {
                       const TextStyle(color: Colors.white,fontSize: 25),);
                   }),
               ),
-              const SizedBox(height: 100,),
+              const SizedBox(height: 10,),
+                GetX<ShoppingController>(
+                  builder:((controller) {
+                    return Center(
+                  child:  Text(controller.products[0].productName.toString()),
+                  );}
+                ),),
+              const SizedBox(height: 10,),
+               ElevatedButton(
+                child: const Text("Second Page"),
+                onPressed: (){
+                  Get.to(ProductName());
+                },
+              ),
+              const SizedBox(height: 10,),
+
             ],
           ),
           floatingActionButton: FloatingActionButton.extended(

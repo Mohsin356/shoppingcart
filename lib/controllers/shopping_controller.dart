@@ -2,8 +2,7 @@ import 'package:get/state_manager.dart';
 import 'package:shoppingcart/models/product.dart';
 
 class ShoppingController extends GetxController{
- List products=<Product>[].obs;
-
+ var products=<Product>[].obs;
  @override
  void onInit() {
     // TODO: implement onInit
@@ -13,7 +12,7 @@ class ShoppingController extends GetxController{
 
 void fetchProduct()async{
    await Future.delayed(const Duration(seconds: 1));
-   var response= [
+   var response= <Product>[
      Product(
          id: 1,
          price: 30,
@@ -33,6 +32,6 @@ void fetchProduct()async{
          productImage: 'abd',
          productName: 'ThirdProd'),
    ];
-   products= response;
+   products.value= response;
 }
 }
