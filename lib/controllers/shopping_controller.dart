@@ -3,6 +3,7 @@ import 'package:shoppingcart/models/product.dart';
 
 class ShoppingController extends GetxController{
  var products=<Product>[].obs;
+ String product_one = "New product";
  @override
  void onInit() {
     // TODO: implement onInit

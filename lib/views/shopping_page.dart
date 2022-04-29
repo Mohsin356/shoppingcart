@@ -85,12 +85,11 @@ class Shopping extends StatelessWidget {
                   }),
               ),
               const SizedBox(height: 10,),
-                GetX<ShoppingController>(
-                  builder:((controller) {
-                    return Center(
-                  child:  Text(controller.products[0].productName.toString()),
-                  );}
-                ),),
+
+            Center(
+                  child:  Text(shoppingController.product_one),
+                  ),
+
               const SizedBox(height: 10,),
                ElevatedButton(
                 child: const Text("Second Page"),

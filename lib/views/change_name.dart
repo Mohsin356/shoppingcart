@@ -20,9 +20,7 @@ class ProductName extends StatelessWidget {
                     Text(controller.products[0].productName.toString()),
                   ElevatedButton(
                     onPressed: () {
-                        Get.to(() => Shopping(), arguments: [
-                  {controller.products[0].productName.toString(): 'First data'},
-                  ]);
+                      controller.product_one="Product name Changed";
                         controller.update();},
                     // {
                     //   controller.products[0].productName='Hello';
