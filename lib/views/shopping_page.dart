@@ -63,7 +63,7 @@ class Shopping extends StatelessWidget {
                                     const SizedBox(height: 10,),
                                     ElevatedButton(
                                       onPressed: () {
-                                        cartController.removefromCart(controller.products[index]);
+                                        cartController.removeFromCart(controller.products[index]);
                                       },
                                       style: ElevatedButton.styleFrom(primary: Colors.red,
                                           onPrimary: Colors.white),

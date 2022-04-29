@@ -9,7 +9,7 @@ class CartController extends GetxController {
   addToCart(Product product){
     cartItems.add(product);
   }
-  removefromCart(Product product) {
+  removeFromCart(Product product) {
     cartItems.remove(product);
   }
 }
