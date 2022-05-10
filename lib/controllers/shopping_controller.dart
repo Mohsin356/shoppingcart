@@ -3,7 +3,7 @@ import 'package:shoppingcart/models/product.dart';
 
 class ShoppingController extends GetxController{
  var products=<Product>[].obs;
- String product_one = "New product";
+ var productOne = "New product".obs;
  @override
  void onInit() {
     // TODO: implement onInit
@@ -18,19 +18,16 @@ void fetchProduct()async{
          id: 1,
          price: 30,
          productDescription: 'some description about product',
-         productImage: 'abd',
          productName: 'FirstProd'),
      Product(
          id: 2,
          price: 40,
          productDescription: 'some description about product',
-         productImage: 'abd',
          productName: 'SecProd'),
      Product(
          id: 3,
          price: 49.5,
          productDescription: 'some description about product',
-         productImage: 'abd',
          productName: 'ThirdProd'),
    ];
    products.value= response;

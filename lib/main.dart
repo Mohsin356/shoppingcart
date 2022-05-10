@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoppingcart/views/shopping_page.dart';
+import 'package:shoppingcart/views/screens/change_name.dart';
+import 'package:shoppingcart/views/screens/shopping_page.dart';
 import 'package:get/get.dart';
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home:  Shopping(),
+      getPages: [
+        GetPage(name: '/Shopping', page: () =>  Shopping()),
+        GetPage(name: '/ProductName',page: () =>  ProductName()),
+      ],
     );
   }
 }

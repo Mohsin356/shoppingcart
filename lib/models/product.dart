@@ -1,14 +1,12 @@
 class Product {
   final int? id;
   String? productName;
-  final String? productImage;
-  final String? productDescription;
-  final double? price;
+  String? productDescription;
+  double? price;
 
   Product({
     this.id,
     this.productName,
-    this.productImage,
     this.productDescription,
     this.price,
   });
