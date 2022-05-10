@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:shoppingcart/controllers/cart_controller.dart';
 import 'package:shoppingcart/controllers/shopping_controller.dart';
 import 'package:shoppingcart/views/screens/change_name.dart';
